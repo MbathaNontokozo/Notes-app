@@ -12,8 +12,8 @@ function App() {
     <Routes>
 
       {/* PUBLIC PAGES - NO NAVBAR */}
-      <Route path="/" element={<SignIn />} />
-      <Route path="/register" element={<Register />} />
+      <Route path="/sign in" element={<SignIn />} />
+      <Route path="/" element={<Register />} />
 
       {/* PROTECTED PAGES - NAVBAR SHOWS */}
       <Route 
@@ -33,7 +33,7 @@ function App() {
         } 
       />
       <Route 
-        path="/add-notes" 
+        path="/add notes" 
         element={
           <Layout>
             <AddNotes />
