@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
 import { Plus } from 'lucide-react';
-import { useNotes } from '../context/NotesContext.jsx'; // custom hook to access Notes context
+import { useNotes } from '../context/NotesContext.jsx'; 
 
 function Addnotes() {
   const [showForm, setShowForm] = useState(false);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
 
-  const { addNote } = useNotes(); // function from context to add a new note
+  const { addNote } = useNotes(); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!title || !description) return; // simple validation
 
-    // Add note to context
+    
     addNote({ title, description });
 
-    // Clear form
+  
     setTitle('');
     setDescription('');
     setShowForm(false);
@@ -26,7 +26,7 @@ function Addnotes() {
   return (
     <div className="relative w-full min-h-screen p-10 bg-white">
       <div className="max-w-[1200px] mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
-        {/* Add New Note Card */}
+       
         <div
           onClick={() => setShowForm(!showForm)}
           className="cursor-pointer bg-blue-800 border-dashed border-2 border-white rounded-2xl flex flex-col justify-center items-center gap-2 p-5 hover:scale-105 transition-transform"
@@ -35,7 +35,7 @@ function Addnotes() {
           <p className="text-white">Add a new note</p>
         </div>
 
-        {/* Form Popup */}
+   
         {showForm && (
           <div className="bg-blue-800 border border-white rounded-2xl p-6">
             <h3 className="text-xl font-bold text-white mb-4">Add New Note</h3>

@@ -11,11 +11,11 @@ function App() {
   return (
     <Routes>
 
-      {/* PUBLIC PAGES - NO NAVBAR */}
+      
       <Route path="/sign in" element={<SignIn />} />
       <Route path="/" element={<Register />} />
 
-      {/* PROTECTED PAGES - NAVBAR SHOWS */}
+      
       <Route 
         path="/dashboard" 
         element={

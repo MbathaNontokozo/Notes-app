@@ -5,7 +5,7 @@ function Dashboard() {
   return (
     <div className="p-10 max-w-[1200px] mx-auto">
 
-      {/* Header */}
+      
       <h1 className="text-3xl font-bold mb-2">
         Welcome back to your Dashboard!
       </h1>
@@ -15,7 +15,7 @@ function Dashboard() {
 
       <div className="grid md:grid-cols-2 gap-6">
 
-        {/* Add Note */}
+       
         <Link to="/add notes">
           <div className="cursor-pointer bg-blue-800 text-white rounded-2xl p-8 hover:scale-105 transition">
             <Plus className="w-10 h-10 mb-3" />
@@ -26,7 +26,7 @@ function Dashboard() {
           </div>
         </Link>
 
-        {/* View Notes */}
+        
         <Link to="/notes">
           <div className="cursor-pointer bg-gray-800 text-white rounded-2xl p-8 hover:scale-105 transition">
             <BookOpen className="w-10 h-10 mb-3" />
